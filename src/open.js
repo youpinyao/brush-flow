@@ -8,7 +8,7 @@ async function run({ proxyServer, url }) {
     };
 
     if (!proxyServer) {
-      delete options;
+      delete options.args;
     }
 
     const browser = await puppeteer.launch(options);

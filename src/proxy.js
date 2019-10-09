@@ -34,8 +34,8 @@ async function refresh() {
           city: tds[3].innerText.trim(),
           hidden: tds[4].innerHTML.trim() === "高匿",
           protocol: tds[5].innerHTML.trim().toLowerCase(),
-          survival_time: tds[6].innerText.trim(),
-          verify_time: tds[7].innerText.trim()
+          survival_time: tds[6].innerText.trim() || tds[8].innerText.trim(),
+          verify_time: tds[7].innerText.trim() || tds[9].innerText.trim(),
         });
       }
     });
